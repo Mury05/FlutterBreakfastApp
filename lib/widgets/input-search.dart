@@ -2,7 +2,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 
 class SearchInput extends StatelessWidget {
-  const SearchInput({super.key});
+  final TextEditingController controller;
+  const SearchInput({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +23,7 @@ class SearchInput extends StatelessWidget {
           ],
         ),
         child: TextField(
+          controller: controller,
           decoration: InputDecoration(
             hintText: 'Search Pancake',
             hintStyle: TextStyle(color: Colors.grey.shade400),

@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_breakfast_app/models/category.dart';
 import 'package:flutter_breakfast_app/screens/diet_screen.dart';
 import 'package:flutter_breakfast_app/widgets/input-search.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,6 +14,28 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final TextEditingController _searchController = TextEditingController();
+
+  List<Categorie> filteredCategories = [];
+
+  @override
+  void initState() {
+    super.initState();
+    filteredCategories = categories;
+    _searchController.addListener(() {
+      filterCategories();
+    });
+  }
+
+  void filterCategories() {
+    final query = _searchController.text.toLowerCase();
+    setState(() {
+      filteredCategories = categories.where((category) {
+        return category.name.toLowerCase().contains(query);
+      }).toList();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +49,13 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 children: [
                   SizedBox(height: 20),
-                  SearchInput(),
+                  SearchInput(
+                    controller: _searchController,
+                  ),
                   SizedBox(height: 20),
-                  CategoryScreen(),
+                  CategoryScreen(
+                    categories: filteredCategories,
+                  ),
                   SizedBox(height: 20),
                   DietScreen(),
                 ],

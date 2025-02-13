@@ -43,5 +43,12 @@ List<Diet> diets = [
     preparationTime: '35mins',
     calories: 200,
   ),
+  Diet(
+    name: 'Blueberry Pancake',
+    iconPath: 'assets/icons/blueberry-pancake.svg',
+    difficulty: 'Easy',
+    preparationTime: '35mins',
+    calories: 2000,
+  ),
   // Ajoute d'autres plats ici
 ];
