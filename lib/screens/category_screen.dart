@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_breakfast_app/models/category.dart';
 
 class CategoryScreen extends StatelessWidget {
- final List<Categorie> categories;
+ final List<Category> categories;
 
   const CategoryScreen({
     super.key, required this.categories

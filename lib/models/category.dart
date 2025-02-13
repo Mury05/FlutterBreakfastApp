@@ -1,13 +1,13 @@
-class Categorie {
+class Category {
   final String name;
   final String iconPath;
 
-  Categorie({required this.name, required this.iconPath});
+  Category({required this.name, required this.iconPath});
 }
 
-List<Categorie> categories = [
-  Categorie(name: 'Salad', iconPath: 'assets/icons/plate.svg'),
-  Categorie(name: 'Cake', iconPath: 'assets/icons/pancakes.svg'),
-  Categorie(name: 'Pie', iconPath: 'assets/icons/pie.svg'),
-  Categorie(name: 'Snacks', iconPath: 'assets/icons/orange-snacks.svg'),
+List<Category> categories = [
+  Category(name: 'Salad', iconPath: 'assets/icons/plate.svg'),
+  Category(name: 'Cake', iconPath: 'assets/icons/pancakes.svg'),
+  Category(name: 'Pie', iconPath: 'assets/icons/pie.svg'),
+  Category(name: 'Snacks', iconPath: 'assets/icons/orange-snacks.svg'),
 ];

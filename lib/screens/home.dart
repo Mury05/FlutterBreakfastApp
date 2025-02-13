@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_breakfast_app/models/category.dart';
 import 'package:flutter_breakfast_app/screens/diet_screen.dart';
@@ -16,7 +15,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _searchController = TextEditingController();
 
-  List<Categorie> filteredCategories = [];
+  List<Category> filteredCategories = [];
 
   @override
   void initState() {
