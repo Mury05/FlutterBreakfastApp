@@ -81,10 +81,14 @@ class DietScreen extends StatelessWidget {
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [
-                                  Color.fromARGB(
-                                      255, 156, 201, 255), // Couleur de départ
-                                  Color.fromARGB(255, 148, 172,
-                                      253), // Couleur de fin (ajuste selon tes préférences)
+                                  index % 2 == 0
+                                      ? Color.fromARGB(255, 156, 201, 255)
+                                      : Color.fromARGB(255, 244, 191,
+                                          220), // Couleur de départ
+                                  index % 2 == 0
+                                      ? Color.fromARGB(255, 148, 172, 253)
+                                      : Color.fromARGB(255, 244, 156,
+                                          204), // Couleur de fin (ajuste selon tes préférences)
                                 ],
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight,
