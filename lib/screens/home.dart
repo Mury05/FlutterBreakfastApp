@@ -15,7 +15,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: appBarWidget(),
       body: Container(
-        color: Colors.grey.shade100,
+        color: Colors.grey.shade50,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Center(
@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   AppBar appBarWidget() {
     return AppBar(
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: Colors.grey.shade50,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,

@@ -2,6 +2,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 
 class SearchInput extends StatelessWidget {
+  const SearchInput({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -10,16 +12,25 @@ class SearchInput extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(14),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 10,
+              spreadRadius: 2,
+              offset: Offset(0, 4),
+            ),
+          ],
         ),
         child: TextField(
           decoration: InputDecoration(
             hintText: 'Search Pancake',
+            hintStyle: TextStyle(color: Colors.grey.shade400),
             border: InputBorder.none,
             contentPadding: EdgeInsets.symmetric(vertical: 14),
             prefixIcon: Padding(
               padding: EdgeInsets.all(12),
               child: SvgPicture.asset(
-                'assets/icons/search.svg', // Chemin de l'icône
+                'assets/icons/search.svg',
                 height: 20,
                 colorFilter:
                     ColorFilter.mode(Colors.grey[500]!, BlendMode.srcIn),
@@ -28,7 +39,7 @@ class SearchInput extends StatelessWidget {
             suffixIcon: Padding(
               padding: EdgeInsets.all(12),
               child: SvgPicture.asset(
-                'assets/icons/Filter.svg', // Chemin de l'icône
+                'assets/icons/Filter.svg',
                 height: 20,
                 colorFilter:
                     ColorFilter.mode(Colors.blue[500]!, BlendMode.srcIn),
