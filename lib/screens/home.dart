@@ -44,21 +44,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Center(
-              child: Column(
-                children: [
-                  SizedBox(height: 20),
-                  SearchInput(
-                    controller: _searchController,
-                  ),
-                  SizedBox(height: 20),
-                  CategoryScreen(
-                    categories: filteredCategories,
-                  ),
-                  SizedBox(height: 20),
-                  DietScreen(),
-                ],
-              ),
+            child: Column(
+              children: [
+                SizedBox(height: 20),
+                SearchInput(
+                  controller: _searchController,
+                ),
+                SizedBox(height: 20),
+                CategoryScreen(
+                  categories: filteredCategories,
+                ),
+                SizedBox(height: 20),
+                DietScreen(),
+              ],
             ),
           ),
         ),
