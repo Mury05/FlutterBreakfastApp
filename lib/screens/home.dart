@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_breakfast_app/screens/diet_screen.dart';
 import 'package:flutter_breakfast_app/widgets/input-search.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_breakfast_app/screens/category_screen.dart';
@@ -17,16 +18,20 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: appBarWidget(),
       body: Container(
         color: Colors.grey.shade50,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Center(
-            child: Column(
-              children: [
-                SizedBox(height: 20),
-                SearchInput(),
-                SizedBox(height: 20),
-                CategoryScreen(),
-              ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: Column(
+                children: [
+                  SizedBox(height: 20),
+                  SearchInput(),
+                  SizedBox(height: 20),
+                  CategoryScreen(),
+                  SizedBox(height: 20),
+                  DietScreen(),
+                ],
+              ),
             ),
           ),
         ),
