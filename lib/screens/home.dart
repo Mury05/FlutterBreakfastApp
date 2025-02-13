@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_breakfast_app/widgets/input-search.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_breakfast_app/screens/category_screen.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -19,12 +20,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Center(
-              child: Column(
-            children: [
-              SizedBox(height: 20),
-              SearchInput(),
-            ],
-          )),
+            child: Column(
+              children: [
+                SizedBox(height: 20),
+                SearchInput(),
+                SizedBox(height: 20),
+                CategoryScreen(),
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -37,7 +41,6 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Icon(Icons.chevron_left_outlined),
           Container(
             padding: EdgeInsets.all(3),
             decoration: BoxDecoration(
@@ -49,7 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
               size: 28,
             ),
           ),
-
           Text(
             'Breakfast',
             style: TextStyle(
